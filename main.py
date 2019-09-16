@@ -102,7 +102,7 @@ def main():
     kmedoids_instance = kmedoids(x_lists, [1, 70, 140])
     # Run cluster analysis and obtain results.
     kmedoids_instance.process()
-    medoids = kmedoids_instance.get_medoids()
+    medoids = np.array(kmedoids_instance.get_medoids())
     print(' this is the mediods : %s %s' % ('\n', medoids))
     clusters = kmedoids_instance.get_clusters()
     # Show allocated clusters.
