@@ -67,30 +67,7 @@ def skm1part1(data, m, k, delta, birch_kmediods_mode=0):
         return birch_skm_part1_helper(data, m, k, delta)
     if birch_kmediods_mode == 1: # run k-medoids
         return kmedoids_skm_part1_helper(data, m, k, delta)
-    # # data_lists = data.tolist()  # modify to list of lists, so it
-    # # Create instance of K-Medoids algorithm.
-    # # kmedoids_instance = kmedoids(data_lists, init_centers(data, k))
-    # birch_instance = Birch(n_clusters=k, threshold=0.1)
-    # # Run cluster analysis and obtain results.
-    # # kmedoids_instance.process()
-    #
-    # birch_instance.fit(data)
-    # labels = birch_instance.predict(data)
-    # l_medoids = []
-    # for label in range(
-    #         np.unique(labels).size):  # since birch does not return centers, I have to calculate them
-    #     print(label)
-    #     cluster = data[labels == label]
-    #     kmedoids_instance_for_birch = kmedoids(cluster.tolist(), init_centers(cluster, 1))
-    #     kmedoids_instance_for_birch.process()
-    #     l_medoids.append(cluster[kmedoids_instance_for_birch.get_medoids()][0])
-    # l_medoids = np.array(l_medoids)
-    #
-    # # l_medoids = data[kmedoids_instance.get_medoids()]
-    # q = calc_q(m, delta)  # calculate q
-    # # calculate the distance to the quantile points around each center
-    # l_distances = calc_quantile_radius_around_centers(data, l_medoids, q, k)
-    # return l_medoids, l_distances
+
 
 
 def calc_q(m, delta):

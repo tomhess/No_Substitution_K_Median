@@ -12,6 +12,7 @@ def exp1_plot_images_of_output_centers(k, X_test, output, l_centers, random_cent
     """
     exp 1: MNIST. Visualize the difference between the output of SKM, the offline algorithm and random centers.
     NOT USED IN THE PAPER.
+
     :param k: int. number of centers
     :param X_test:
     :param output:
